@@ -3,13 +3,15 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Anders Weijnitz -- Arch/Dev -- @aweijnitz
 
 # THANKS
 
-    <name>
+    The Internet
+    Github
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Normalize.css
+    harvest

@@ -1,4 +1,4 @@
-Gloggmingel
+Glöggmingel
 ==========================
 A small invitation website
 
