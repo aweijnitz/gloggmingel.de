@@ -1,5 +1,11 @@
 @import "../general/_media-queries";
 
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+
+$etikett-color: rgba(245,233,240,0.95);
+$etikett-color-dark: darken($etikett-color, 10%);
+
+
 html {
     font-size: 16px;
 }
@@ -10,7 +16,52 @@ body {
     //    background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
 }
 
-.band {
+h1 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+}
+
+
+h2 {
+    font-size: 1em;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+}
+
+p {
+    font-size: 0.85em;
+    position: relative; left: 0.5em;
+    padding-top: 0.0.5em;
+}
+
+.etikett {
+    background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+
+    color: #848402;
+    font-family: 'Architects Daughter', cursive;
+    padding: 2em;
+    background-color: $etikett-color;
+    position: relative;
+    top: 2em;
+
+    min-width: 10%;
+    max-width: 30%;
+    width: 25%;
+    margin: 0 auto;
+
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .14),
+    0 1px 18px 0 rgba(0, 0, 0, .12),
+    0 3px 5px -1px rgba(0, 0, 0, .4);
+
+    z-index: 1;
+
+    @include portrait {
+        max-width: 50%;
+        width: 40%;
+    }
+}
+
+.ribbon {
     //background-image: url("https://www.transparenttextures.com/patterns/xv.png");
     background-image: url("https://www.transparenttextures.com/patterns/translucent-fibres.png");
     background-color: #790400;
