@@ -2,8 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 
+@import "ribbon";
+@import "page-moreInfo";
+
 $etikett-color: rgba(245,233,240,0.95);
 $etikett-color-dark: darken($etikett-color, 10%);
+$text-color: #848402;
+$link-color: #848402;
+
 
 
 html {
@@ -14,6 +20,11 @@ body {
     background-color: #003e00;
     background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
     //    background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
+}
+
+// This makes the color of svg icons the same as the text color
+svg {
+    fill: currentColor;
 }
 
 h1 {
@@ -34,10 +45,41 @@ p {
     padding-top: 0.0.5em;
 }
 
+
+/* unvisited link */
+a:link {
+    color: $link-color;
+}
+
+/* visited link */
+a:visited {
+    color: $link-color;
+}
+
+/* mouse over link */
+a:hover {
+    color: $link-color;
+}
+
+/* selected link */
+a:active {
+    color: $link-color;
+}
+
+.moreInfoArrow {
+    position: relative;
+    top: -0.1em;
+    left: 0.05em;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+}
+
+
 .etikett {
     background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
 
-    color: #848402;
+    color: $text-color;
     font-family: 'Architects Daughter', cursive;
     padding: 2em;
     background-color: $etikett-color;
@@ -61,95 +103,3 @@ p {
     }
 }
 
-.ribbon {
-    //background-image: url("https://www.transparenttextures.com/patterns/xv.png");
-    background-image: url("https://www.transparenttextures.com/patterns/translucent-fibres.png");
-    background-color: #790400;
-
-    @include rotate(40);
-
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14),
-    0 1px 18px 0 rgba(0, 0, 0, .12),
-    0 3px 5px -1px rgba(0, 0, 0, .4);
-
-    position: fixed;
-    height: 10rem;
-    width: 2000px;
-    bottom: 0px;
-    left: -800px;
-
-
-    // Galaxy S5
-    @include screen(340px, 380px, portrait) {
-        @include rotate(30);
-        height: 9rem;
-        width: 2000px;
-        bottom: 120px;
-        left: -800px;
-
-    }
-
-    @include iphone4(portrait) {
-        @include rotate(30);
-        height: 7.5rem;
-        width: 2000px;
-        bottom: 90px;
-        left: -800px;
-    }
-
-
-    @include iphone5(portrait) {
-        @include rotate(30);
-        height: 8.5rem;
-        width: 2000px;
-        bottom: 90px;
-        left: -800px;
-    }
-
-
-    @include iphone6(portrait) {
-        @include rotate(30);
-        height: 11rem;
-        width: 2000px;
-        bottom: 130px;
-        left: -800px;
-    }
-
-    @include iphone6-plus(portrait) {
-        @include rotate(30);
-        height: 11rem;
-        width: 2000px;
-        bottom: 160px;
-        left: -800px;
-    }
-
-    @include ipad(portrait) {
-
-        @include rotate(25);
-        height: 15rem;
-        width: 2000px;
-        bottom: 300px;
-        left: -800px;
-
-    }
-
-    @include ipad(landscape) {
-
-        @include rotate(40);
-        height: 14rem;
-        width: 2000px;
-        bottom: 100px;
-        left: -800px;
-    }
-
-
-    @include ipad-retina(portrait) {
-        @include rotate(25);
-        height: 21rem;
-        width: 2000px;
-        bottom: 410px;
-        left: -800px;
-
-    }
-
-}
