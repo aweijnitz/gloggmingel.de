@@ -16,26 +16,47 @@
 </head>
 <body style='margin : 0px; overflow: hidden;'>
 <a-scene embedded arjs>
+    <!-- Tree tree -->
+    <a-entity>
+        <!-- make tree move up/down -->
+        <a-animation attribute="position" from="0 0 0" to="0 0.1 0"
+                     dur="3000" repeat="indefinite" easing="ease-out-elastic"
+                     direction="alternate">
+        </a-animation>
 
-    <a-sphere position="0 0.415 0" radius="0.015" color="#c61f19" >
-        <a-animation attribute="material.color" from="#c61f19" to="#fcc2b8"
-                     dur="3000" repeat="indefinite" easing="ease-in-out"
-                     direction="alternate"></a-animation>
-    </a-sphere>
-    <a-ring position="0 0.415 0" radius-inner="0.03" radius-outer="0.06" color="#efe823">
+        <!-- Top sphere with animated color -->
+        <a-sphere position="0 0.415 0" radius="0.015" color="#c61f19">
+            <a-animation attribute="material.color" from="#c61f19" to="#fcc2b8"
+                         dur="3000" repeat="indefinite" easing="ease-in-out"
+                         direction="alternate"></a-animation>
+        </a-sphere>
+
+        <!-- Top ring, rotating -->
+        <a-ring position="0 0.415 0" radius-inner="0.03" radius-outer="0.06" color="#efe823">
+            <a-animation attribute="rotation" to="0 360 0" fill="forward"
+                         dur="3400" repeat="indefinite" easing="ease-in-out">
+            </a-animation>
+        </a-ring>
+        <a-cone position="0 0.3 0" height="0.11" radius-bottom="0.1" radius-top="0.003" color="#075e04"></a-cone>
+        <a-cone position="0 0.21 0" height="0.08" radius-bottom="0.15" radius-top="0.03" color="#075e04"></a-cone>
+        <a-cone position="0 0.14 0" height="0.07" radius-bottom="0.18" radius-top="0.04" color="#075e04"></a-cone>
+        <a-cone position="0 0.08 0" height="0.07" radius-bottom="0.2" radius-top="0.05" color="#075e04"></a-cone>
+    </a-entity>
+    <!-- Tree trunk -->
+    <a-cylinder position="0 0 0" height="0.09" radius="0.05" color="#ad650d"></a-cylinder>
+
+    <!-- Boxes -->
+    <a-entity>
         <a-animation attribute="rotation" to="0 360 0" fill="forward"
-                     dur="3400" repeat="indefinite" easing="ease-in-out"></a-animation>
-    </a-ring>
-    <a-cone position="0 0.3 0" height="0.11" radius-bottom="0.1" radius-top="0.003" color="#075e04"></a-cone>
-    <a-cone position="0 0.21 0" height="0.08" radius-bottom="0.15" radius-top="0.03" color="#075e04"></a-cone>
-    <a-cone position="0 0.14 0" height="0.07" radius-bottom="0.18" radius-top="0.04" color="#075e04"></a-cone>
-    <a-cone position="0 0.08 0" height="0.07" radius-bottom="0.2" radius-top="0.05" color="#075e04"></a-cone>
-    <a-cylinder position="0 0 0" height="0.07" radius="0.05" color="#ad650d"></a-cylinder>
+                     dur="10000" repeat="indefinite" easing="ease-sine">
+        </a-animation>
+        <a-box position="0.3 0 0" depth="0.1" height="0.1" width="0.1" color="#ddbbf0"></a-box>
+        <a-box position="-0.3 0 -0.2" depth="0.1" height="0.1" width="0.1" color="#c61f19"></a-box>
+        <a-box position="-0.15 0 0.55" depth="0.1" height="0.1" width="0.1" color="#c61f19"></a-box>
+    </a-entity>
 
-
-    <a-box position="0.3 0 0" depth="0.1" height="0.1" width="0.1" color="#c61f19"></a-box>
-    <a-box position="-0.3 0 -0.2" depth="0.1" height="0.1" width="0.1" color="#c61f19"></a-box>
-    <a-box position="-0.15 0 0.25" depth="0.1" height="0.1" width="0.1" color="#c61f19"></a-box>
+    <a-circle position="0 -0.05 0"radius="0.35" rotation="-90 0 0" color="#5555aa"></a-circle>
+    <a-plane position="0 -0.055 0" height="1.4" width="1.4" rotation="-90 0 0" color="#333366"></a-plane>
 
     <!--
     <a-box position='0 0.5 0' material='opacity: 0.8;'></a-box>
