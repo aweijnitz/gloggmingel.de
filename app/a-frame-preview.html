@@ -26,7 +26,8 @@
         <a-sphere position="0 0.415 0" radius="0.015" color="#c61f19">
             <a-animation attribute="material.color" from="#c61f19" to="#fcc2b8"
                          dur="3000" repeat="indefinite" easing="ease-in-out"
-                         direction="alternate"></a-animation>
+                         direction="alternate">
+            </a-animation>
         </a-sphere>
 
         <!-- Top ring, rotating -->
@@ -53,10 +54,12 @@
         <a-box position="-0.15 0 0.55" depth="0.1" height="0.1" width="0.1" color="#c61f19"></a-box>
     </a-entity>
 
+    <!-- Mat -->
+    <a-text position='0.9 -0.055 -0.9' rotation="0 -90 0" color="#c61f19" value="Gloggmingel!"></a-text>
     <a-circle position="0 -0.05 0"radius="0.35" rotation="-90 0 0" color="#5555aa"></a-circle>
     <a-plane position="0 -0.055 0" height="1.4" width="1.4" rotation="-90 0 0" color="#333366"></a-plane>
 
-    <a-entity camera="userHeight: 0.2" position="0 0 1" look-controls></a-entity>
+    <a-entity camera="userHeight: 0.5" position="0 0 2" look-controls></a-entity>
 
 </a-scene>
 </body>
