@@ -1,13 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,200');
+
+$heading-color: rgb(51, 52, 51);
+$text-color: rgb(62, 63, 64);
+$background-color: rgb(206, 209, 215);
+$link-color: rgb(45, 45, 50);
+
+body {
+}
+
+.hero {
+    padding-top: 1rem;
+}
+
+.faq {
+    padding-top: 0.5rem;
+}
+
+
 .page-moreInfo {
-    display: none;
+//    display: none;
+    display: block;
+
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
-    background-color: silver;
+    overflow: auto;
+
+    background-color: $background-color;
+    background: url("../../../images/background/app-bg.jpg") no-repeat;
+    background-size: 100%;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+
+    font-size: 1.1rem;
+
+}
+
+.moreInfo-container {
+    padding-top: 10%;
+    width: 87%;
+    height: 100%;
+    margin: 0 auto;
+
+    background-color: rgba(245,245,255, 0.6);
+    padding: 0.2rem;
+
+    @include min-screen(1024px) {
+        width: 50%;
+        margin: 5%;
+
+    }
+
 }
 
 .page-moreInfo h1 {
-    color: #790400;
+    color: $heading-color;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 200;
+
+    letter-spacing: 0.09em;
+    line-height: 130%;
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+
+}
+
+
+.page-moreInfo h2 {
+    color: $heading-color;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+
+    letter-spacing: 0.09em;
+    padding-bottom: 0.3em;
+    padding-top: 0.5em;
+}
+
+.page-moreInfo dt {
+    font-style: italic;
+}
+
+.page-moreInfo dd {
+    position: relative;
+    top: 0.0em;
+    left: 0.6em;
+    padding-bottom: 0.25em;
+}
+
+
+/* unvisited link */
+.page-moreInfo a:link {
+    color: $link-color;
+}
+
+/* visited link */
+.page-moreInfo a:visited {
+    color: $link-color;
+}
+
+/* mouse over link */
+.page-moreInfo a:hover {
+    color: $link-color;
+}
+
+/* selected link */
+.page-moreInfo a:active {
+    color: $link-color;
 }

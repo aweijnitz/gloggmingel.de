@@ -1,10 +1,10 @@
 $(function () {
 
-    $('#moreInfoLink').click(function () {
+    $('#xmoreInfoLink').click(function () {
         showInfo();
     });
 
-    $('#dismissLink').click(function () {
+    $('#xdismissLink').click(function () {
         hideInfo();
     });
 
