@@ -52,7 +52,7 @@ body {
 
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    font-size: 1.1rem;
+    font-size: 1.1em;
 
     padding-bottom: 10%;
     padding-top: 10%;
@@ -62,6 +62,7 @@ body {
     width: 87%;
     height: 100%;
     margin: 0 auto;
+    overflow-wrap: break-word;
 
     background-color: rgba(245,245,255, 0.6);
     padding: 0.2rem;
