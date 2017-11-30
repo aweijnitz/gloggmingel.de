@@ -14,6 +14,9 @@ body {
     height: 100%;
 }
 
+.track-item {
+
+}
 
 
 .hero {
@@ -24,6 +27,15 @@ body {
     padding-top: 0.5rem;
 }
 
+
+.player {
+    font-size: 1.2em;
+}
+
+.playlist {
+    padding-top: 1.1em;
+    padding-bottom: 1em;
+}
 
 .page-moreInfo {
     width: 100%;
@@ -37,10 +49,12 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
     font-size: 1.1rem;
+
+    padding-bottom: 10%;
+    padding-top: 10%;
 }
 
 .moreInfo-container {
-    padding-top: 10%;
     width: 87%;
     height: 100%;
     margin: 0 auto;

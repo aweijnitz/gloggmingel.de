@@ -11,9 +11,9 @@
     <link rel="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
     <link rel="stylesheet" href="styles/styles.css">
 
+    <!--
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 
-    <!--
     <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     -->
@@ -23,7 +23,7 @@
 <div class="page-moreInfo">
     <div class="moreInfo-container">
         <div class="hero">
-            <h1>Was gibt es zu wissen?</h1>
+            <h1>Berechtigte Fragen</h1>
             <div class="faq">
                 <dl>
                     <dt>Dress code?</dt>
@@ -49,8 +49,29 @@
 
         <div class="player">
             <h2>Währendessen?</h2>
-            Ich bin ungedultig. Was kann ich währendessen tun,
-            um mich in die richtige Stimmung zu bringen?
+            <p>Was kann ich währendessen tun,
+                um mich in die richtige Stimmung zu bringen?</p>
+            <p>Lass uns ein Paar hausgemachte Weihnachtslieder empfehlen!</p>
+            <div class="playlist">
+                <div class="track-item">
+                    <audio controls="controls" class="track" id="track0" preload="metadata"">
+                        <source src="tracks/SantaClausIsComingToTown.mp3" type="audio/mpeg"/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="track-item">
+                    <audio controls="controls" id="track1" preload="metadata">
+                        <source src="tracks/ukeduo_have_yourself_a_merry_little_christmas.mp3" type="audio/mpeg"/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="track-item">
+                    <audio controls="controls" id="track2" preload="metadata">
+                        <source src="tracks/feliz_navidad_20071118.mp3" type="audio/mpeg"/>
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
         </div>
 
         <div class="mystery-teaser">
@@ -61,5 +82,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

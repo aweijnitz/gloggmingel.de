@@ -801,6 +801,8 @@ References:
 		}
 	};
 })(this);
+
+
 $(function () {
 
     $('#xmoreInfoLink').click(function () {

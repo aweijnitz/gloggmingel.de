@@ -9,18 +9,12 @@ $etikett-color: rgba(245,233,240,0.95);
 $etikett-color-dark: darken($etikett-color, 10%);
 $text-color: #848402;
 $link-color: #848402;
-
-
+$background-color: #003e00;
 
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
 
-body {
-    background-color: #003e00;
-    background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-    //    background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
-}
 
 // This makes the color of svg icons the same as the text color
 svg {
@@ -50,6 +44,14 @@ p {
 }
 
 .frontpage-container {
+
+    width: 100%;
+    min-height: 100%;
+    overflow: auto;
+
+    background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png") repeat;
+    background-color: $background-color;
+    background-size: cover;
 
 }
 
