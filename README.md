@@ -17,13 +17,14 @@ During development mode, run the default task so you'll have watchers and browse
 
 ### Build distribution
 When you're ready to deploy, simply do the following:
-* Run `gulp deploy`
+* Run `gulp dist`
 * All of the files you need will be in /dist with your images optimized, css compressed and js compressed
 
 ## Node Versions Supported
 The following Node versions have been tested
 * 4.x
 * 6.x
+* 8.9.x (v2018.0.0)
 
 # More Information
 This project was started using *Harvest*.
