@@ -4,7 +4,8 @@
   "repository": "https://github.com/aweijnitz/gloggmingel.de/",
   "description": "Basic Christmas party invitation website",
   "dependencies": {
-    "gulp-clean-css": "^3.10.0"
+    "gulp-clean-css": "^3.10.0",
+    "gulp-htmlmin": "^5.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.0",

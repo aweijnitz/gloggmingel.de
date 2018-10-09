@@ -3,6 +3,8 @@ node_modules
 .DS_Store
 app/styles/styles.css
 app/.htaccess
+build
+dist
 
 # Created by https://www.gitignore.io/api/emacs,webstorm
 
