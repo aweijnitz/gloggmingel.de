@@ -15,7 +15,7 @@ uglify = require('gulp-uglify');
 sass = require('gulp-sass');
 sourceMaps = require('gulp-sourcemaps');
 imagemin = require('gulp-imagemin');
-minifyCSS = require('gulp-minify-css');
+cleanCSS = require('gulp-clean-css');
 browserSync = require('browser-sync');
 autoprefixer = require('gulp-autoprefixer');
 //gulpSequence = require('gulp-sequence').use(gulp);
@@ -135,7 +135,7 @@ gulp.task('styles-deploy', function (cb) {
         }))
         //the final filename of our combined css file
         .pipe(concat('styles.css'))
-        .pipe(minifyCSS())
+        .pipe(cleanCSS())
         //where to save our final, compressed css file
         .pipe(gulp.dest('dist/styles')).on('end', cb).on('error', gutil.log)
         ;
