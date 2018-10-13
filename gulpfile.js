@@ -16,11 +16,11 @@ const autoprefixer = require('gulp-autoprefixer');
 const plumber = require('gulp-plumber');
 const htmlmin = require('gulp-htmlmin');
 
-const baseDir = 'app';
+const baseDir = './app';
 const buildDir = 'build';
 const distDir = 'dist';
 
-gulp.task('browserSync', function () {
+gulp.task('browserSync', function (done) {
     browserSync({
         server: {
             baseDir: buildDir + '/'
@@ -30,8 +30,13 @@ gulp.task('browserSync', function () {
         },
         notify: false
     });
+    done();
 });
 
+gulp.task('browserSyncReload', function (done) {
+    browserSync.reload();
+    done();
+});
 
 //compressing images & handle SVG files
 gulp.task('images-build', function (cb) {
@@ -39,7 +44,7 @@ gulp.task('images-build', function (cb) {
         .pipe(plumber())
         .pipe(imagemin({optimizationLevel: 5, progressive: true, interlaced: true}))
         .pipe(gulp.dest(buildDir + '/images'))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.stream())
         .on('error', gutil.log).on('end', cb);
 });
 
@@ -57,7 +62,7 @@ gulp.task('scripts-build', function (cb) {
         .pipe(plumber())
         .pipe(concat('app.js'))
         .pipe(gulp.dest(buildDir + '/scripts'))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.stream())
         .on('error', gutil.log).on('end', cb);
 });
 
@@ -101,7 +106,7 @@ gulp.task('styles-build', function (cb) {
         //where to save our final, compressed css file
         .pipe(gulp.dest(buildDir + '/styles'))
         //notify browserSync to refresh
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.stream())
         .on('error', gutil.log).on('end', cb);
 });
 
@@ -118,7 +123,7 @@ gulp.task('styles-deploy', function (cb) {
 gulp.task('fonts-build', function (cb) {
     return gulp.src(baseDir + '/fonts/**/*')
         .pipe(gulp.dest(buildDir + '/fonts'))
-        .pipe(browserSync.reload({stream: true})).on('end', cb);
+        .pipe(browserSync.stream()).on('end', cb);
 });
 
 gulp.task('fonts-deploy', function () {
@@ -132,7 +137,7 @@ gulp.task('html-build', function (cb) {
     return gulp.src(baseDir + '/*.html')
         .pipe(plumber())
         .pipe(gulp.dest(buildDir))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.stream())
         .on('error', gutil.log).on('end', cb);
 });
 
@@ -168,16 +173,18 @@ gulp.task('scaffold-dirs', function () {
 
 gulp.task('scaffold', gulp.series('clean', 'scaffold-dirs'));
 
+gulp.task('watch', function () {
+    //a list of watchers, so it will watch all of the following files waiting for changes
+    gulp.watch(baseDir + '/scripts/src/**', gulp.series('scripts-build', 'browserSyncReload'));
+    gulp.watch(baseDir + '/styles/scss/**', gulp.series('styles-build', 'browserSyncReload'));
+    gulp.watch(baseDir + '/images/**', gulp.series('images-build', 'browserSyncReload'));
+    gulp.watch(baseDir + '/*.html', gulp.series('html-build', 'browserSyncReload'));
+});
+
 gulp.task('build',
     gulp.parallel('images-build', 'fonts-build', 'scripts-build', 'styles-build', 'html-build'));
 
-gulp.task('default', gulp.series('browserSync', 'build'), function () {
-    //a list of watchers, so it will watch all of the following files waiting for changes
-    gulp.watch(buildDir + '/scripts/src/**', ['scripts']);
-    gulp.watch(buildDir + '/styles/scss/**', ['styles']);
-    gulp.watch(buildDir + '/images/**', ['images']);
-    gulp.watch(buildDir + '/*.html', ['html']);
-});
+gulp.task('default', gulp.series('build', 'browserSync', 'watch'));
 
 gulp.task('dist',
     gulp.series(

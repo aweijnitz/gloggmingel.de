@@ -1,23 +1,22 @@
 {
-  "name": "gloggmingel",
-  "version": "2018.0.0",
-  "repository": "https://github.com/aweijnitz/gloggmingel.de/",
-  "description": "Basic Christmas party invitation website",
-  "dependencies": {
-    "gulp-clean-css": "^3.10.0",
-    "gulp-htmlmin": "^5.0.1"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.26.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sequence": "^0.4.6",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^2.0.1",
-    "gulp-util": "^3.0.8"
-  }
+    "name": "gloggmingel",
+    "version": "2018.0.0",
+    "repository": "https://github.com/aweijnitz/gloggmingel.de/",
+    "description": "Basic Christmas party invitation website",
+    "dependencies": {},
+    "devDependencies": {
+        "browser-sync": "^2.26.0",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^3.1.1",
+        "gulp-clean-css": "^3.10.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^4.1.0",
+        "gulp-plumber": "^1.1.0",
+        "gulp-sass": "^3.1.0",
+        "gulp-sequence": "^0.4.6",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^2.0.1",
+        "gulp-util": "^3.0.8"
+    }
 }
