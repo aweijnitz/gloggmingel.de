@@ -5,7 +5,10 @@
 //frameworks
 
 //global things
-@import 'general/_reset';
+
+//@import 'general/_reset';
+@import "general/_media-queries";
 @import 'layout/_main';
-@import "general/media-queries";
+
 //pages
+//@import "pages/assymetric";

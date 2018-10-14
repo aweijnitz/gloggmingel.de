@@ -1,58 +1,65 @@
 @import "../general/_media-queries";
+//@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Poiret+One|Shrikhand');
 
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
-
-@import "ribbon";
-@import "page-moreInfo";
-
-$etikett-color: rgba(245,233,240,0.95);
-$etikett-color-dark: darken($etikett-color, 10%);
-$text-color: #848402;
-$link-color: #848402;
-$background-color: #003e00;
+//@import "ribbon";
+//@import "page-moreInfo";
 
 html {
-    font-size: 18px;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.1em;
 }
 
+body {
+    padding-top: 1.1em;
+    //    background-color: #003e00;
+
+    background-image: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 1em,
+            darkseagreen 0,
+            darkseagreen 2em,
+            transparent 0,
+            transparent 3em,
+            beige 0,
+            beige 4em,
+            transparent 0,
+            transparent 5em,
+            lightcoral 0,
+            lightcoral 6em,
+            transparent 0,
+            transparent 7em,
+            beige 0,
+            beige 8em
+    ),
+    repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 1em,
+            snow 0,
+            snow 2em,
+            transparent 0,
+            transparent 3em,
+            wheat 0,
+            wheat 4em,
+            transparent 0,
+            transparent 5em,
+            wheat 0,
+            wheat 6em
+    );
+
+    background-blend-mode: multiply;
+
+}
 
 // This makes the color of svg icons the same as the text color
 svg {
     fill: currentColor;
 }
 
-h1 {
-    font-size: 1.5em;
-    padding-bottom: 0.3em;
-}
-
-
-h2 {
-    font-size: 1em;
-    padding-bottom: 0.3em;
-    padding-top: 0.3em;
-}
-
-p {
-    font-size: 0.85em;
-    position: relative; left: 0.5em;
-    padding-top: 0.0.5em;
-}
-
 .preloader {
     background: url("../../../images/background/app-bg.jpg") no-repeat -9999px -9999px;
-}
-
-.frontpage-container {
-
-    width: 100%;
-    min-height: 100%;
-    overflow: auto;
-
-    background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png") repeat;
-    background-color: $background-color;
-    background-size: cover;
-
 }
 
 /* unvisited link */
@@ -84,31 +91,8 @@ a:active {
     height: 1em;
 }
 
-
-.etikett {
-    background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
-
-    color: $text-color;
-    font-family: 'Architects Daughter', cursive;
-    padding: 2em;
-    background-color: $etikett-color;
-    position: relative;
-    top: 2em;
-
-    min-width: 10%;
-    max-width: 30%;
-    width: 25%;
-    margin: 0 auto;
-
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .14),
-    0 1px 18px 0 rgba(0, 0, 0, .12),
-    0 3px 5px -1px rgba(0, 0, 0, .4);
-
-    z-index: 1;
-
-    @include portrait {
-        max-width: 50%;
-        width: 40%;
-    }
+.heading-invite {
+    //    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Shrikhand', cursive;
 }
 
