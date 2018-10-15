@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    -->
     <link rel="stylesheet" href="styles/styles.css">
 
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
 
     <!--
     <link rel="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
@@ -21,11 +24,7 @@
 
 </head>
 <body>
-<div>
-
-    <!-- FRONT PAGE END CONTAINER -->
-    <div class="preloader"/>
-
+<div class="mainView">
     <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
         <div class="tc">
             <img src="images/gloeggmugg.png" class="br-100 h3 w3 dib"
@@ -39,12 +38,84 @@
             <p>Wo?</p>
             <h2>Bei uns!</h2>
             <p>Warum?</p>
-            <h2>Warum nicht?!</h2>
+            <h2>Warum nicht?</h2>
         </div>
     </article>
 
-</div>
+    <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+        <div class="tc">
+            <h1 class="f4 heading-invite">Infos</h1>
+            <hr class="mw3 bb bw1 b--black-10">
+        </div>
+        <div class="lh-copy measure center f6 black-70">
+            <div class="faq">
+                <dl>
+                    <dt class="f6 fw4 mt2 mb0 black-60">Dress code?</dt>
+                    <dd class="f6 f5-ns fw6 lh-title black mv0">Leger</dd>
 
+                    <dt class="f6 fw4 mt2 mb0 black-60">Hausschuhe?</dt>
+                    <dd class="f6 f5-ns fw6 lh-title black mv0">Bitte mitbringen nach Wunsch.</dd>
+
+                    <dt class="f6 fw4 mt2 mb0 black-60">Gibt es 'was zum Essen?</dt>
+                    <dd class="f6 f5-ns fw6 lh-title black mv0">Pepparkakor und leichtes Abendessen</dd>
+
+                    <dt class="f6 fw4 mt2 mb0 black-60">Ich bin Vegetarier!</dt>
+                    <dd class="f6 f5-ns fw6 lh-title black mv0">Auch für Vegetarier werden versorgt</dd>
+
+                    <dt class="f6 fw4 mt2 mb0 black-60">Gibt es 'was zum Trinken?</dt>
+                    <dd class="f6 f5-ns fw6 lh-title black mv0">Ja, auch alkoholfreie Alternative.</dd>
+
+                    <dt class="f6 fw4 mt2 mb0 black-60">Auch etwas für die Kinder?</dt>
+                    <dd class="f6 f5-ns fw6 lh-title black mv0">Nein</dd>
+
+                    <dt class="f6 fw4 mt2 mb0 black-60">Was!?!</dt>
+                    <dd class="f6 f5-ns fw6 lh-title black mv0">Klar gibt es etwas für die Kinder!</dd>
+                </dl>
+            </div>
+        </div>
+    </article>
+
+    <!--
+    <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+        <div class="tc">
+            <h1 class="f4 heading-invite">Und jetzt?</h1>
+            <hr class="mw3 bb bw1 b--black-10">
+        </div>
+        <div class="lh-copy measure center f6 black-70">
+            <div class="">
+                <p>Lass uns ein paar hausgemachte Weihnachtslieder empfehlen!</p>
+                <div class="playlist">
+                    <div class="track-item">
+                        <audio controls="controls" id="track0" preload="metadata">
+                            <source src="tracks/feliz_navidad_20071118.mp3" type="audio/mpeg"/>
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="track-item">
+                        <audio controls="controls" class="track" id="track1" preload="metadata"
+                        ">
+                        <source src="tracks/all_i_want_for_xmas_20071113.mp3" type="audio/mpeg"/>
+                        Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="track-item">
+                        <audio controls="controls" id="track2" preload="metadata">
+                            <source src="tracks/ukeduo_have_yourself_a_merry_little_christmas.mp3" type="audio/mpeg"/>
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    -->
+</div>
+<!--
+<div id="player-overlay">
+HELLO FROM OVERLAY
+</div>
+-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@3.3.1/dist/amplitude.js"></script>
 <script src="scripts/app.js"></script>
 </body>
 </html>

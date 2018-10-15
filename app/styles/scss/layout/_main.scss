@@ -2,8 +2,6 @@
 //@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Poiret+One|Shrikhand');
 
-//@import "ribbon";
-//@import "page-moreInfo";
 
 html {
     font-family: 'Poiret One', cursive;
@@ -51,6 +49,10 @@ body {
 
     background-blend-mode: multiply;
 
+}
+
+dd {
+    margin-left: 0.85em;
 }
 
 // This makes the color of svg icons the same as the text color
