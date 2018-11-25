@@ -15,6 +15,8 @@ During development mode, run the default task so you'll have watchers and browse
 * Run `gulp` to start it up
 * Try to modify html, scss and javascript files and see how the page gets updated with BrowserSync
 
+Styling is done using [Tachyons](https://tachyons.io/)
+
 ### Build distribution
 When you're ready to deploy, simply do the following:
 * Run `gulp dist`
